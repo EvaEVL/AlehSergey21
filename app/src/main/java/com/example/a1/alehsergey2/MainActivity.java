@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    String[] arrrandomList = new String[]{"kon","cha","mi","ay","il","sa","su","ke","na","ru","to"};
 
 
     @Override
