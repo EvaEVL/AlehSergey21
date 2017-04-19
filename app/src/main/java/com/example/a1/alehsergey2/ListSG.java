@@ -36,7 +36,7 @@ public class ListSG extends Fragment{
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemsg,parent,false);
-            return ViewHolder(view);
+            return new ViewHolder(view);
         }
 
         @Override
