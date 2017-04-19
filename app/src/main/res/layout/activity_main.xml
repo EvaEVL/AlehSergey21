@@ -33,15 +33,16 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
     />
 
- <android.suppor.design.widget.FloatingActionButtom
 
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/listFloat"
-         android:layout_gravity="bottom|right"
-         app:backgroundTint="#496961f9"
-         android:layout_margin="16dp"
- />
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:id="@+id/listFloat"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="16dp"
+    />
 
 
 </android.support.design.widget.CoordinatorLayout>
