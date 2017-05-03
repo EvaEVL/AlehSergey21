@@ -15,20 +15,30 @@ import java.util.ArrayList;
 
 public class ListSG extends Fragment{
 
+    Button bt;
     static String what_i_get ;
-    ArrayList<InsideList> ap = new ArrayList<InsideList>();
-    AdapForListSG boxAdapter;
+    static ArrayList<InsideList> ap = new ArrayList<InsideList>();
+    static AdapForListSG boxAdapter;
 
-    final Context context = getActivity();
+   Context context;
 
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle bdsm){
         View view1 = inflater.inflate(R.layout.listsg,null);
-
+        context = inflater.getContext();
         boxAdapter = new AdapForListSG(context,ap);
-
+        bt = (Button) view1.findViewById(R.id.bdsm);
         ListView lvMain = (ListView) view1.findViewById(R.id.lvMein);
         lvMain.setAdapter(boxAdapter);
 
+
+bt.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        ap.add(new InsideList("something","something"));
+        Toast.makeText(context,String.valueOf(ap.size()),Toast.LENGTH_SHORT).show();
+        boxAdapter.notifyDataSetChanged();
+    }
+});
         lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
@@ -75,10 +85,10 @@ public class ListSG extends Fragment{
 
 
 
-    public void addToList(View view ){
+ /* public void addToList(View view ){
         ap.add(new InsideList("something","something"));
         Toast.makeText(context,String.valueOf(ap.size()),Toast.LENGTH_SHORT).show();
         boxAdapter.notifyDataSetChanged();
     }
-
+    */
 }
