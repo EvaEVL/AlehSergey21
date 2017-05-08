@@ -18,5 +18,6 @@ public class ListSGFirstTry extends ListFragment {
     }
 
 }
+///////////////////////
 
 //http://startandroid.ru/ru/uroki/vse-uroki-spiskom/179-urok-109-android-3-fragments-listfragment-spisok.html
